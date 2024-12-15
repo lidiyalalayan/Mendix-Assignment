@@ -16,7 +16,7 @@ Start by navigating to your **Home_Web** page on the left-sided structural pane 
 ## 4 Adding the Tools Entity
 It is essential to create an persistable [entity](https://docs.mendix.com/refguide/entities/) in order to store your data and populate your app with inventory information in Mendix Studio Pro. Right-click the **Domain Model** below **MyFirstModule** and drag **Entity** onto your working area from the toolbox on the right pane. 
 
-![image1](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/images/domain-model-entity.jpg)
+![Entity in the domain model](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/images/domain-model-entity.jpg)
 
 Double-click the entity and create two new attributes, **Name** and **Code**, by clicking **New** in the tab Attributes. These are small information pieces about your entity, which in this case will contain the name and the code of each tool. 
 
@@ -47,7 +47,7 @@ In order to display the **Name** and **Code** attributes on top of each other an
 2. Place the text widget named ‘Tool code: ‘ before the **{Code}**.
 3. Double-click the **Tool code** text and add a line break in the caption as following:
 
-![image5](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-14%20152138.jpg)
+![image5](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/images/widget-text.jpg)
 
 Your page is now ready to store the data of the inventory tools.
 ## 7 Setting Up the Tools Edit Page
@@ -55,11 +55,11 @@ This page will enable app users to conduct several operations such as searching,
 
 Let's start by dragging a *Data grid** block onto the newly created **Tools_EditGrid** page. Double-click the block and choose **Tools** as the **Entity(path)**. You can notice two **error** messages on the pane below the Working area.
 
-![image6](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-15%20154049.jpg)
+![image6](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/images/data-grid-buttons.jpg)
 
 These errors indicate that the **New** and **Edit** buttons both require an on click page. Create a new **Tools_AddNew** page. Go to the General setting of the **New** button and select this page.
 
-![image7](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-13%20205225.jpg)
+![image7](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/images/select-page.jpg)
 
 The **Edit** button of your block automatically inherits the same setting as the **New** button.
 ## 8 Setting Up the Add Tools Page
@@ -70,7 +70,7 @@ Now, you need to apply logic to the **Save** button. You can achieve that by cre
 1. Double-click the **Save** button, and open the General settings.
 2. Select **Call a microflow** as an on click event. 
 
-![image8](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-15%20181612.jpg)
+![image8](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/images/call-microflow.jpg)
 
 3. A new pop-up page will appear. Select the **New** button.
 4. Name the microflow ‘Tools_ValidateAndSaveNew’ and press **OK**.
@@ -79,19 +79,19 @@ You will now be able to see your Tools_ValidateAndSaveNew microflow on the left-
 
 1. Drag the **Parameter** element onto the microflow to the working area. Double-click it, select the data type **Object** and choose the entity **Tools**.This will connect the parameter to the Tools entity in order to relate it to the microflow.
 
-![image9](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-15%20154742.jpg)
+![image9](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/images/parameter-logic.jpg)
 
 2. Drag the **Decision** element onto the microflow, double-click it and add the following line of code into the expression box: *$Tools/Name != empty and trim($Tools/Name) != '' and $Tools/Code != empty and trim($Tools/Code) != ''*. This expression checks that both the **Name** and the **Code** attributes contain data and are not just empty spaces.
 
-![image10](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-15%20154756.jpg)
+![image10](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/images/decision-logic.jpg)
 
 3. On the true path, add the **Commit object(s)** element to the microflow. Commit to tools [object](https://docs.mendix.com/refguide/committing-objects/) as demonstrated below. 
 
-![image11](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-15%20154816.jpg)
+![image11](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/images/commit-object.jpg)
 
 4. Add the **Show message** element on the true path. Select **New** in the parameter box and add *$Tools/Name* as a parameter. Afterwards, insert the message of success: ‘The tool *"{1}"* was saved successfully!’ into the Template box.
 
-![image12](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-15%20154952.jpg)
+![image12](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/images/success-message.jpg)
 
 5. On the true path, add the **Show** page element and select **Tools_EditGrid** page. This will redirect the user to the page where they can add another tool, providing a smooth transition back to the Tools_EditGrid page.
 6. On the false path, insert the **Show message** element  for when the requirements are not met. Select the type of message as Error, and add the following message to the template box: ‘Error! Both "Name" and "Code" must contain data in order to save a tool. Please try again.’
@@ -101,16 +101,16 @@ Now that you are all set with the microflow creation you need to add [validation
 * Attention! A tool with this name already exists. Please choose a different name.
 * Attention! A tool with this code already exists. Please choose a different code.
 
-![image13](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-13%20211718.jpg)
+![image13](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/images/entity-validation-rules.jpg)
 
 ## 9 Improving the Navigation and Publishing the App
 In order to improve the reverse navigation between pages, you can place **Button** widgets on each page. Make sure to provide the correct path to each button that will eventually lead to the desired flow. This can be achieved by following the same steps as previously described for the Action Card block’s  button. You can also set the caption, the tooltip and the icon to improve your widgets’ look.
 
-![image14](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-15%20160204.jpg)
+![image14](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/images/previous-page-button.jpg)
 
 Now it is time to test your app. Press the **Run locall**y button, wait a few seconds and then click the **Press View** app button to preview your app in the browser. When you are happy with your app, **Publish** it. All of this can be performed from the top bar of Mendix Studio Pro .
 
-![image15](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/view-and-publish.png)
+![image15](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/images/view-and-publish.png)
 
 ## Read more
 * [Create Your First Two Overview and Detail Pages | Mendix Documentation](https://docs.mendix.com/howto/front-end/create-your-first-two-overview-and-detail-pages/)
