@@ -18,8 +18,6 @@ It is essential to create an persistable [entity](https://docs.mendix.com/refgui
 
 
 
-
-
 Double-click the entity and create two new attributes, **Name** and **Code**, by clicking **New** in the tab Attributes. These are small information pieces about your entity, which in this case will contain the name and the code of each tool. 
 
 
