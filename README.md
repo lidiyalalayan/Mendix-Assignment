@@ -101,7 +101,7 @@ Now that you are all set with the microflow creation you need to add [validation
 * Attention! A tool with this name already exists. Please choose a different name.
 * Attention! A tool with this code already exists. Please choose a different code.
 
-![image13](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-15%20154952.jpg)
+![image13](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-13%20211718.jpg)
 
 ## 9 Improving the Navigation and Publishing the App
 In order to improve the reverse navigation between pages, you can place **Button** widgets on each page. Make sure to provide the correct path to each button that will eventually lead to the desired flow. This can be achieved by following the same steps as previously described for the Action Card block’s  button. You can also set the caption, the tooltip and the icon to improve your widgets’ look.
