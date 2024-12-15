@@ -20,11 +20,11 @@ It is essential to create an persistable [entity](https://docs.mendix.com/refgui
 
 Double-click the entity and create two new attributes, **Name** and **Code**, by clicking **New** in the tab Attributes. These are small information pieces about your entity, which in this case will contain the name and the code of each tool. 
 
-![image2](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-14%20133908.jpg)
+![image2](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/images/entity-attributes.jpg)
 
 Double-click the entity and name it ‘Tools’ from the **General** settings. You are now all set.
 
-![image3](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-13%20165049.jpg)
+![image3](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/images/entity.jpg)
 ## 5 Setting Up the Tools Page
 Right-click **MyFirstModule** on the left-sided pane and select **Add page**. Name this page ‘Tools’. 
 
@@ -39,7 +39,7 @@ Now it is time to create a page where users can search the stock of tools and vi
 
 You will now be able to connect the **Tools** entity that you have created previously as a data source to your **List view** widget. Simply double-click the widget, go to the **Data Source** tab and select the **Tools** entity for **Entity(path)*.
 
-![image4](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-14%20144234.jpg)
+![image4](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/images/data-source-entity.jpg)
 
 In order to display the **Name** and **Code** attributes on top of each other and improve the user interface, use the **Text** widget. 
 
