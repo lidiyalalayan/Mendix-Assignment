@@ -106,11 +106,11 @@ Now that you are all set with the microflow creation you need to add [validation
 ## 9 Improving the Navigation and Publishing the App
 In order to improve the reverse navigation between pages, you can place **Button** widgets on each page. Make sure to provide the correct path to each button that will eventually lead to the desired flow. This can be achieved by following the same steps as previously described for the Action Card block’s  button. You can also set the caption, the tooltip and the icon to improve your widgets’ look.
 
-![image14](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-15%20154952.jpg)
+![image14](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-15%20160204.jpg)
 
 Now it is time to test your app. Press the **Run locall**y button, wait a few seconds and then click the **Press View** app button to preview your app in the browser. When you are happy with your app, **Publish** it. All of this can be performed from the top bar of Mendix Studio Pro .
 
-![image15](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-15%20160204.jpg)
+![image15](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/view-and-publish.png)
 
 ## Read more
 * [Create Your First Two Overview and Detail Pages | Mendix Documentation](https://docs.mendix.com/howto/front-end/create-your-first-two-overview-and-detail-pages/)
