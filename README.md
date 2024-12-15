@@ -70,7 +70,7 @@ Now, you need to apply logic to the **Save** button. You can achieve that by cre
 1. Double-click the **Save** button, and open the General settings.
 2. Select **Call a microflow** as an on click event. 
 
-![image8](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-14%20142705.jpg)
+![image8](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-15%20181612.jpg)
 
 3. A new pop-up page will appear. Select the **New** button.
 4. Name the microflow ‘Tools_ValidateAndSaveNew’ and press **OK**.
