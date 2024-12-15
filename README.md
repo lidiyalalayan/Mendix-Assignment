@@ -16,7 +16,7 @@ Start by navigating to your **Home_Web** page on the left-sided structural pane 
 ## 4 Adding the Tools Entity
 It is essential to create an persistable [entity](https://docs.mendix.com/refguide/entities/) in order to store your data and populate your app with inventory information in Mendix Studio Pro. Right-click the **Domain Model** below **MyFirstModule** and drag **Entity** onto your working area from the toolbox on the right pane. 
 
-![image1](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/Screenshot%202024-12-15%20150139.jpg)
+![image1](https://github.com/lidiyalalayan/Mendix-Assignment/blob/main/images/domain-model-entity.jpg)
 
 Double-click the entity and create two new attributes, **Name** and **Code**, by clicking **New** in the tab Attributes. These are small information pieces about your entity, which in this case will contain the name and the code of each tool. 
 
